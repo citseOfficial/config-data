@@ -1,11 +1,11 @@
 server:
-  port: 9001
+  port: ${PORT:${SERVER_PORT:0}}
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://20.197.181.20:{EUREKA_PORT:${eureka.server.port}}/eureka/
+      defaultZone: http://20.197.181.20:8761/eureka
     instance:
       instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
       hostname: 20.197.181.20
