@@ -5,7 +5,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      default-zone: http://20.197.181.20:8761
+      default-zone: 20.197.181.20:8761
     instance:
       instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
       hostname: 20.197.181.20
